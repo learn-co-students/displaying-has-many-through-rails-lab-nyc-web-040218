@@ -1,0 +1,16 @@
+<h1>All Doctors:</h1>
+
+<ul>
+    <% @doctors.each do |doc| %>
+        <li>
+            <%= doc.name %> | <%= doc.department %>
+            <ul>
+                <% doc.patients.each do |p| %>
+                    <li>
+                        <%= p.name %>
+                    </li>
+                <% end %>
+            </ul>
+        </li>
+    <% end %>
+</ul>
